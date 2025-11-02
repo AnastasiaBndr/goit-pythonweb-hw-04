@@ -9,6 +9,7 @@ logging.basicConfig(
 )
 
 async def main():
+    
     parser = argparse.ArgumentParser(description="Process a folders path:")
     parser.add_argument('source_folder', type=str,
                         help="Path to source folder")
