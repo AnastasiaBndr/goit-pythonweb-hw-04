@@ -6,11 +6,13 @@ import logging
 logger = logging.getLogger(__name__)
 
 async def copy_file(output_path, files):
+    
     if not os.path.isdir(output_path):
         logger.error(f"Folder {output_path} does not exist!")
         return
     
     async def copy_one_file(file):
+
         filepath = file["path"]
 
         _, extension = os.path.splitext(filepath)

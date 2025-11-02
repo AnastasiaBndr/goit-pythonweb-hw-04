@@ -7,6 +7,7 @@ from .copy_file import copy_file
 logger = logging.getLogger(__name__)
 
 async def read_file_async(filepath):
+    
     try:
         async with aiofiles.open(filepath, mode='rb') as f:
             return await f.read()
@@ -16,6 +17,7 @@ async def read_file_async(filepath):
 
 
 async def read_folder(source_path, output_path):
+
     contents = []
     if not os.path.isdir(source_path):
         logger.error(f"Folder {source_path} does not exist!")
